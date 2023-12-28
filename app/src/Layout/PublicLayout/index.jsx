@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const PublicLayout = ({ children, title }) => {
   const updateTabTitle = (newTitle) => {
@@ -9,9 +11,13 @@ const PublicLayout = ({ children, title }) => {
   }, []);
   return (
     <>
-      <header>Navbar</header>
+      <header>
+        <Navbar />
+      </header>
       <main>{children}</main>
-      <footer>footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
